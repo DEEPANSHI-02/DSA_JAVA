@@ -143,6 +143,20 @@ public class SinglyLinkedList {
         return false;
     }
 
+    public int findPosition(int target){
+        Node temp = head;
+        int position = 1;
+
+        while(temp != null){
+            if(temp.data == target){
+                return position;
+            } else{
+                temp = temp.next;
+                position++;
+            }
+        }
+    }
+
     public static void main(String[] args){
 
         SinglyLinkedList list = new SinglyLinkedList();
